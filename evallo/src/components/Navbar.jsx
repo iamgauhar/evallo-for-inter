@@ -1,8 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react'
 import ProfileTab from './ProfileTab'
 import LanguageTab from './LanguageTab'
+import { useUtilityContext } from '../../context/UtilityContext'
 
 function Navbar() {
+    const { mobileSidebar, setMobileSidebar, fullSidebar, setFullSidebar } = useUtilityContext()
     const [profieActive, setProfileActive] = useState(false)
     const [langActive, setLangActive] = useState(false)
     let menuTab = useRef()
@@ -26,11 +28,11 @@ function Navbar() {
         document.addEventListener("mousedown", secTabHandler)
     })
     return (
-        <div className='border flex items-center px-6 py-2 flex-col-reverse sm:flex-row justify-between'>
+        <div className='border flex items-center px-6 py-2 flex-col-reverse sm:flex-row justify-between z-40'>
             <div>
-                <div className='flex items-center bg-slate-100 overflow-hidden rounded '>
+                <div className='flex items-center bg-gray-100 overflow-hidden rounded '>
                     <div className='py-[2px] pl-[2px]'>
-                        <input className='min-w-72 px-5 py-3 text-sm bg-slate-100 rounded-tl rounded-bl border-r focus:outline-none focus:bg-white focus:border-r-white' type="search" placeholder='Search term' />
+                        <input className='min-w-72 px-5 py-3 text-sm bg-gray-100 rounded-tl rounded-bl border-r focus:outline-none focus:bg-white focus:border-r-white' type="search" placeholder='Search term' />
                     </div>
                     <button className=' hover:text-white hover:bg-[#425a8b] '>
                         <i className='bx bx-search-alt-2 px-6 py-2.5 text-xl text-gray-400 hover:text-white'></i>
@@ -38,7 +40,13 @@ function Navbar() {
                 </div>
             </div>
             <div className='w-full flex h-12 gap-4 items-center justify-between mb-2 sm:w-auto sm:mb-0'>
-                <div className='block sm:hidden p-2 hover:bg-gray-300 cursor-pointer rounded-sm'>
+                <div onClick={() => {
+                    if (fullSidebar !== false) {
+                        setFullSidebar(false)
+                    }
+                    setMobileSidebar(!mobileSidebar)
+                    console.log(mobileSidebar)
+                }} className='block sm:hidden p-2 hover:bg-gray-300 cursor-pointer rounded-sm'>
                     <div>
                         <i className='bx bxs-grid text-xl' ></i>
                     </div>
