@@ -99,10 +99,10 @@ const MenuList = () => {
             </Menu.Item>
 
             <hr className='my-4' />
-            <Menu.Item className='font-medium flex items-center text-[#425a8b]' key='stats' icon={<MdSettings size={22} color='#adb5bd' className='relative top-1' />}>
+            <Menu.Item className='font-medium flex items-center text-[#425a8b]' key='setting' icon={<MdSettings size={22} color='#adb5bd' className='relative top-1' />}>
                 Settings
             </Menu.Item>
-            <Menu.Item className='font-medium flex items-center text-[#425a8b]' key='stats' icon={<FaTag size={22} color='#adb5bd' className='relative top-1' />}>
+            <Menu.Item className='font-medium flex items-center text-[#425a8b]' key='starter' icon={<FaTag size={22} color='#adb5bd' className='relative top-1' />}>
                 Starter page
             </Menu.Item>
 

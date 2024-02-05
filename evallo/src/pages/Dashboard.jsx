@@ -4,6 +4,8 @@ import Navbar from '../components/Navbar'
 import StatsCard from '../components/StatsCard'
 import MenuList from '../components/MenuList';
 import { useUtilityContext } from '../../context/UtilityContext';
+import LineChart from '../components/LineChart';
+import BarChart from '../components/BarChart';
 
 
 const { Header, Sider } = Layout;
@@ -11,16 +13,16 @@ const Dashboard = () => {
   const { fullSidebar, setFullSidebar, mobileSidebar, setMobileSidebar } = useUtilityContext()
   return (
     <>
-      <div className='flex'>
+      <div className='flex sm:h-screen'>
 
-        <Layout className={`${mobileSidebar ? "absolute left-0" : "absolute left-[-100%]"} sm:relative sm:left-0 z-50 transition-all`}>
-          <Sider collapsed={fullSidebar} collapsible trigger={null}>
+        <Layout className={`${mobileSidebar ? "left-0" : "left-[-100%]"} absolute top-0 sm:relative sm:left-0 z-50 transition-all`}>
+          <Sider width={300} collapsed={fullSidebar} collapsible trigger={null}>
             <MenuList />
           </Sider>
         </Layout>
         <div className='w-full'>
           <Navbar />
-          <div className='p-6 bg-gray-100'>
+          <div className='p-7 bg-gray-100'>
             <div className='flex justify-between items-center flex-wrap'>
               <div>
                 <h1 className='text-3xl font-bold text-gray-700 py-5 sm:py-1'>Dashboard</h1>
@@ -34,7 +36,18 @@ const Dashboard = () => {
               </div>
             </div>
             <StatsCard />
+            <div className=' grid grid-cols-3 grid-rows-2 gap-6'>
+              <div className='bg-white h-fit col-span-3 md:col-span-2 row-span-3 p-6 border rounded-xl hover:-translate-y-1 transition-all duration-500'>
+                <h3 className='font-bold text-gray-800 pb-4'>Sale statistics</h3>
+                <LineChart />
+              </div>
+              <div className='bg-white h-fit col-span-3 md:col-span-1 row-span-2 p-6 border rounded-xl hover:-translate-y-1 transition-all duration-500'>
+                <h3 className='font-bold text-gray-800 pb-4'>Revenue Base on Area</h3>
+                <BarChart />
+              </div>
+            </div>
           </div>
+
         </div>
       </div>
     </>

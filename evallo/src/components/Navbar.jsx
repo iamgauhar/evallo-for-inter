@@ -72,7 +72,7 @@ function Navbar() {
                     <div ref={menuLang}>
                         <div onClick={() => setLangActive(!langActive)} className='cursor-pointer flex items-center gap-[2px]'>
                             <i className='bx bx-world text-[22px] text-gray-500'  ></i>
-                            <span><i class='bx bxs-down-arrow text-[10px] text-gray-300'></i></span>
+                            <span><i className='bx bxs-down-arrow text-[10px] text-gray-300'></i></span>
                         </div>
                         {langActive ? <LanguageTab /> : ""}
                     </div>
@@ -81,12 +81,14 @@ function Navbar() {
                             <div className='h-10 w-10 rounded-full overflow-hidden border-2 hover:border-[#425a8b]'>
                                 <img src="https://wp.alithemes.com/html/ecom/dashboard/assets/imgs/people/avatar2.jpg" alt="" />
                             </div>
-                            <span><i class='bx bxs-down-arrow text-[10px] text-gray-300'></i></span>
+                            <span><i className='bx bxs-down-arrow text-[10px] text-gray-300'></i></span>
                         </div>
                         {profieActive ? <ProfileTab /> : ""}
                     </div>
                 </div>
+                <div>
 
+                </div>
             </div>
         </div>
     )
