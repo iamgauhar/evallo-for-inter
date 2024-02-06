@@ -15,7 +15,7 @@ const Dashboard = () => {
     <>
       <div className='flex sm:max-h-screen'>
 
-        <Layout className={`${mobileSidebar ? "left-0" : "left-[-100%]"} fixed top-0 sm:left-0 z-50 transition-all`}>
+        <Layout className={`${mobileSidebar ? "left-0" : "left-[-100%]"} fixed top-0 sm:left-0 max-h-screen overflow-auto scrollbar-hide z-50 transition-all`}>
           <Sider width={300} collapsed={fullSidebar} collapsible trigger={null}>
             {/* <Sider className='fixed' style={{ overflow: 'auto', height: '100vh', left: 0, top: 0, bottom: 0 }} width={300} collapsed={fullSidebar} collapsible trigger={null}> */}
             <MenuList />

@@ -62,7 +62,7 @@ const LineChart = () => {
     };
 
     return (
-        <Line hight={100} data={data} />
+        <Line data={data} />
 
     )
 }
