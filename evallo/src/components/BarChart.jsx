@@ -49,7 +49,7 @@ const BarChart = () => {
         ],
     };
     return (
-        <Bar height={70} width={100} data={data} />
+        <Bar height={78} width={100} data={data} />
     )
 }
 

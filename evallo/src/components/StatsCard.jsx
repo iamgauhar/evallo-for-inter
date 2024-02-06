@@ -2,7 +2,7 @@ import React from 'react'
 
 const StatsCard = () => {
     return (
-        <div className='py-8 flex justify-between flex-col md:flex-row gap-6'>
+        <div className='py-6 flex justify-between flex-col md:flex-row gap-6'>
             <div className='flex gap-2 items-start bg-white border p-4 rounded-xl w-full hover:-translate-y-1 transition-all duration-500'>
                 <div className='rounded-full bg-gray-300 p-2 h-12 min-w-12 grid place-content-center'>
                     <i className='bx bxs-dollar-circle text-2xl text-[#425a8b]' ></i>

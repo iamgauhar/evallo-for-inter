@@ -28,7 +28,7 @@ function Navbar() {
         document.addEventListener("mousedown", secTabHandler)
     })
     return (
-        <div className='border flex items-center px-6 py-2 flex-col-reverse sm:flex-row justify-between z-40'>
+        <div className='border-b flex items-center px-7 py-3 flex-col-reverse sm:flex-row justify-between z-40'>
             <div>
                 <div className='flex items-center bg-gray-100 overflow-hidden rounded '>
                     <div className='py-[2px] pl-[2px]'>
@@ -85,9 +85,6 @@ function Navbar() {
                         </div>
                         {profieActive ? <ProfileTab /> : ""}
                     </div>
-                </div>
-                <div>
-
                 </div>
             </div>
         </div>

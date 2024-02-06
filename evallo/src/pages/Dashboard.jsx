@@ -15,12 +15,13 @@ const Dashboard = () => {
     <>
       <div className='flex sm:h-screen'>
 
-        <Layout className={`${mobileSidebar ? "left-0" : "left-[-100%]"} absolute top-0 sm:relative sm:left-0 z-50 transition-all`}>
+        <Layout className={`${mobileSidebar ? "left-0" : "left-[-100%]"} fixed top-0 sm:left-0 z-50 transition-all`}>
           <Sider width={300} collapsed={fullSidebar} collapsible trigger={null}>
+          {/* <Sider className='fixed' style={{ overflow: 'auto', height: '100vh', left: 0, top: 0, bottom: 0 }} width={300} collapsed={fullSidebar} collapsible trigger={null}> */}
             <MenuList />
           </Sider>
         </Layout>
-        <div className='w-full'>
+        <div className={`w-full ml-0 ${fullSidebar ? "sm:ml-[79px]" : "sm:ml-[300px]"}`}>
           <Navbar />
           <div className='p-7 bg-gray-100'>
             <div className='flex justify-between items-center flex-wrap'>

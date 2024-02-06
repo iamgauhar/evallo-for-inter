@@ -13,8 +13,8 @@ const MenuList = () => {
     const { fullSidebar, setFullSidebar, mobileSidebar, setMobileSidebar } = useUtilityContext()
 
     return (
-        <Menu className='min-h-screen overflow-auto flex flex-col' mode='inline'>
-            <div className='flex justify-between items-center pl-4 pr-2 py-6'>
+        <Menu className='min-h-screen overflow-auto flex flex-col box-border' mode='inline'>
+            <div className='flex justify-between items-center pl-4 pr-2 py-5'>
                 {fullSidebar ? "" : <div className='cursor-pointer'>
                     <img src="https://wp.alithemes.com/html/ecom/dashboard/assets/imgs/theme/logo.svg" alt="" />
                 </div>}
@@ -25,13 +25,13 @@ const MenuList = () => {
                     <BsTextIndentRight size={22} color='#adb5bd' />
                 </div>
             </div>
-            <hr className='mb-2' />
+            <hr className='mb-4' />
 
-            <Menu.Item className='font-medium flex items-center active:bg-gray-300' key='home' icon={<MdHome size={22} color='#425a8b' />}>
+            <Menu.Item className='font-medium flex items-center active:bg-gray-300' key='home' icon={<MdHome size={24} color='#425a8b' />}>
                 Dashboard
             </Menu.Item>
 
-            <Menu.SubMenu className=' font-medium text-[#425a8b]' title="Product" key='bag' icon={<MdShoppingBag size={22} color='#adb5bd' className='' />}>
+            <Menu.SubMenu className=' font-medium text-[#425a8b]' title="Product" key='bag' icon={<MdShoppingBag size={24} color='#adb5bd' className='' />}>
 
                 <Menu.Item className=' text-[#425a8b]' key='product-1' color='#425a8b' icon={<BsDot size={22} color='#adb5bd' />}>
                     Products 1
@@ -48,7 +48,7 @@ const MenuList = () => {
 
             </Menu.SubMenu>
 
-            <Menu.SubMenu className='font-medium  text-[#425a8b]' key='order' title="Orders" icon={<MdShoppingCart size={22} color='#adb5bd' />}>
+            <Menu.SubMenu className='font-medium  text-[#425a8b]' key='order' title="Orders" icon={<MdShoppingCart size={24} color='#adb5bd' />}>
                 <Menu.Item className='font-medium text-[#425a8b]' key='cart-1' icon={<BsDot size={22} color='#adb5bd' />}>
                     Orders 1
                 </Menu.Item>
@@ -60,21 +60,21 @@ const MenuList = () => {
                 </Menu.Item>
             </Menu.SubMenu>
 
-            <Menu.SubMenu className='font-medium text-[#425a8b]' key='seller' title="Sellers" icon={<FaShop size={22} color='#adb5bd' />}>
-                <Menu.Item className='font-medium text-[#425a8b]' key='seller-1' icon={<BsDot size={22} color='#adb5bd' className='relative top-1' />}>
+            <Menu.SubMenu className='font-medium text-[#425a8b]' key='seller' title="Sellers" icon={<FaShop size={24} color='#adb5bd' />}>
+                <Menu.Item className='font-medium text-[#425a8b]' key='seller-1' icon={<BsDot size={22} color='#adb5bd' />}>
                     Sellers india
                 </Menu.Item>
-                <Menu.Item className='font-medium text-[#425a8b]' key='seller-2' icon={<BsDot size={22} color='#adb5bd' className='relative top-1' />}>
+                <Menu.Item className='font-medium text-[#425a8b]' key='seller-2' icon={<BsDot size={22} color='#adb5bd' />}>
                     Sellers USA
                 </Menu.Item>
-                <Menu.Item className='font-medium text-[#425a8b]' key='seller-3' icon={<BsDot size={22} color='#adb5bd' className='relative top-1' />}>
+                <Menu.Item className='font-medium text-[#425a8b]' key='seller-3' icon={<BsDot size={22} color='#adb5bd' />}>
                     Sellers Arabs
                 </Menu.Item>
             </Menu.SubMenu>
-            <Menu.Item className='font-medium flex items-center text-[#425a8b]' key='add' icon={<MdAddBox size={22} color='#adb5bd' className='relative top-1' />}>
+            <Menu.Item className='font-medium flex items-center text-[#425a8b]' key='add' icon={<MdAddBox size={24} color='#adb5bd' />}>
                 Add product
             </Menu.Item>
-            <Menu.Item className='font-medium flex items-center text-[#425a8b]' key='dollar' icon={<AiFillDollarCircle size={22} color='#adb5bd' className='relative top-1' />}>
+            <Menu.Item className='font-medium flex items-center text-[#425a8b]' key='dollar' icon={<AiFillDollarCircle size={24} color='#adb5bd' />}>
                 Transactions
             </Menu.Item>
             <Menu.SubMenu className='font-medium text-[#425a8b]' key='user' title="User" icon={<FaUser size={22} color='#adb5bd' />}>
@@ -88,21 +88,21 @@ const MenuList = () => {
                     Logout
                 </Menu.Item>
             </Menu.SubMenu>
-            <Menu.Item className='font-medium flex items-center text-[#425a8b]' key='review' icon={<MdMessage size={22} color='#adb5bd' className='relative top-1' />}>
+            <Menu.Item className='font-medium flex items-center text-[#425a8b]' key='review' icon={<MdMessage size={24} color='#adb5bd' />}>
                 Reviews
             </Menu.Item>
-            <Menu.Item className='font-medium flex items-center text-[#425a8b]' key='star' icon={<MdStars size={22} color='#adb5bd' className='relative top-1' />}>
+            <Menu.Item className='font-medium flex items-center text-[#425a8b]' key='star' icon={<MdStars size={24} color='#adb5bd' />}>
                 Brand
             </Menu.Item>
-            <Menu.Item className='font-medium flex items-center text-[#425a8b]' key='stats' icon={<MdPieChart size={22} color='#adb5bd' className='relative top-1' />}>
+            <Menu.Item className='font-medium flex items-center text-[#425a8b]' key='stats' icon={<MdPieChart size={24} color='#adb5bd' />}>
                 Statistics
             </Menu.Item>
 
             <hr className='my-4' />
-            <Menu.Item className='font-medium flex items-center text-[#425a8b]' key='setting' icon={<MdSettings size={22} color='#adb5bd' className='relative top-1' />}>
+            <Menu.Item className='font-medium flex items-center text-[#425a8b]' key='setting' icon={<MdSettings size={22} color='#adb5bd' />}>
                 Settings
             </Menu.Item>
-            <Menu.Item className='font-medium flex items-center text-[#425a8b]' key='starter' icon={<FaTag size={22} color='#adb5bd' className='relative top-1' />}>
+            <Menu.Item className='font-medium flex items-center text-[#425a8b]' key='starter' icon={<FaTag size={22} color='#adb5bd' />}>
                 Starter page
             </Menu.Item>
 
