@@ -17,13 +17,13 @@ const Dashboard = () => {
 
         <Layout className={`${mobileSidebar ? "left-0" : "left-[-100%]"} fixed top-0 sm:left-0 z-50 transition-all`}>
           <Sider width={300} collapsed={fullSidebar} collapsible trigger={null}>
-          {/* <Sider className='fixed' style={{ overflow: 'auto', height: '100vh', left: 0, top: 0, bottom: 0 }} width={300} collapsed={fullSidebar} collapsible trigger={null}> */}
+            {/* <Sider className='fixed' style={{ overflow: 'auto', height: '100vh', left: 0, top: 0, bottom: 0 }} width={300} collapsed={fullSidebar} collapsible trigger={null}> */}
             <MenuList />
           </Sider>
         </Layout>
         <div className={`w-full ml-0 ${fullSidebar ? "sm:ml-[79px]" : "sm:ml-[300px]"}`}>
           <Navbar />
-          <div className='p-7 bg-gray-100'>
+          <div className='p-2 sm:p-7 bg-gray-100'>
             <div className='flex justify-between items-center flex-wrap'>
               <div>
                 <h1 className='text-3xl font-bold text-gray-700 py-5 sm:py-1'>Dashboard</h1>
@@ -38,12 +38,12 @@ const Dashboard = () => {
             </div>
             <StatsCard />
             <div className=' grid grid-cols-3 grid-rows-2 gap-6'>
-              <div className='bg-white h-fit col-span-3 md:col-span-2 row-span-3 p-6 border rounded-xl hover:-translate-y-1 transition-all duration-500'>
-                <h3 className='font-bold text-gray-800 pb-4'>Sale statistics</h3>
+              <div className='bg-white h-fit col-span-3 md:col-span-2 row-span-3 p-5 border rounded-xl hover:-translate-y-1 transition-all duration-500'>
+                <h3 className='font-bold text-gray-700 pb-2'>Sale statistics</h3>
                 <LineChart />
               </div>
-              <div className='bg-white h-fit col-span-3 md:col-span-1 row-span-2 p-6 border rounded-xl hover:-translate-y-1 transition-all duration-500'>
-                <h3 className='font-bold text-gray-800 pb-4'>Revenue Base on Area</h3>
+              <div className='bg-white h-fit col-span-3 md:col-span-1 row-span-2 p-5 border rounded-xl hover:-translate-y-1 transition-all duration-500'>
+                <h3 className='font-bold text-gray-700 pb-2'>Revenue Base on Area</h3>
                 <BarChart />
               </div>
             </div>

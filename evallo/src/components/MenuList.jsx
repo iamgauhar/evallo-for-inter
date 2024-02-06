@@ -27,7 +27,7 @@ const MenuList = () => {
             </div>
             <hr className='mb-4' />
 
-            <Menu.Item className='font-medium flex items-center active:bg-gray-300' key='home' icon={<MdHome size={24} color='#425a8b' />}>
+            <Menu.Item className='font-medium bg-slate-200' key='home' icon={<MdHome size={24} color='#425a8b' />}>
                 Dashboard
             </Menu.Item>
 
