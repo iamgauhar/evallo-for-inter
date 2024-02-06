@@ -13,7 +13,7 @@ const Dashboard = () => {
   const { fullSidebar, setFullSidebar, mobileSidebar, setMobileSidebar } = useUtilityContext()
   return (
     <>
-      <div className='flex sm:h-screen'>
+      <div className='flex sm:max-h-screen'>
 
         <Layout className={`${mobileSidebar ? "left-0" : "left-[-100%]"} fixed top-0 sm:left-0 z-50 transition-all`}>
           <Sider width={300} collapsed={fullSidebar} collapsible trigger={null}>
@@ -23,7 +23,7 @@ const Dashboard = () => {
         </Layout>
         <div className={`w-full ml-0 ${fullSidebar ? "sm:ml-[79px]" : "sm:ml-[300px]"}`}>
           <Navbar />
-          <div className='p-2 sm:p-7 bg-gray-100'>
+          <div className='p-3 sm:p-7 bg-gray-100'>
             <div className='flex justify-between items-center flex-wrap'>
               <div>
                 <h1 className='text-3xl font-bold text-gray-700 py-5 sm:py-1'>Dashboard</h1>
